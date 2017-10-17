@@ -1,5 +1,6 @@
-# Since UCF dataset only have 50 images, the result of this dataset is not very stable. Different partition and network's initialization will get different result.
-# We chooce the best result of the partition and save it in the partition_UCF.mat. 
+# Since UCF dataset only have 50 images, the result of this dataset is not very stable. 
+# Different partition and network's initialization will get different result.
+# We choose the best result of the partition and save it in the partition_UCF.mat. 
 
 from keras.models import Sequential
 from keras.models import model_from_json
