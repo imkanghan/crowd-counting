@@ -11,13 +11,15 @@ If you find this code useful in your research, please cite:
 	  journal={arXiv preprint arXiv:1706.03686},
 	  year={2017}
 	}
-	
+
+### Prepare
+
+0. Downloading data at https://www.dropbox.com/sh/garodovussfijta/AAABTgM_Ut19Be4kGzHqf6MUa?dl=0 and put it at the root folder of the project.
+0. Compiling the MRF code by running testMRF.m in MRF folder.
+
 ### Evalute
 
 You can direct evalute the model's performance by running EvaluteUCF.m or EvaluateSHT.m using predicted patches' count. This process will apply Markov Random Field and get the global count.
-
-0. Compiling the MRF code by running testMRF.m in MRF folder.
-0. Running EvaluteUCF.m or EvaluateSHT.m.
 
 ### Training a new model
 If you want to train a new regress model, follow these steps:
