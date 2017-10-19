@@ -12,9 +12,9 @@ test_data_dir = 'data/test_A_SHT.mat'
 
 print('load training data...')
 train_data = sci.loadmat(train_data_dir)
-X_train = features2XY(train_data['features'][0], train_data['counts'][0])
+X_train, Y_train = features2XY(train_data['features'][0], train_data['counts'][0])
 test_data = sci.loadmat(test_data_dir)
-X_test = features2XY(test_data['features'][0], test_data['counts'][0])
+X_test, Y_test = features2XY(test_data['features'][0], test_data['counts'][0])
 
 # define fully connected regress network
 model = Sequential()
@@ -25,7 +25,7 @@ model.add(Dense(50, activation='relu'))
 model.add(Dense(1, activation='relu'))
 
 print(model.summary())
-exit() 
+#exit() 
 
 model.compile(optimizer='Adam',
               loss='mean_squared_error',
@@ -43,3 +43,4 @@ with open("model/model_A_SHT.json", "w") as json_file: json_file.write(model_jso
 # serialize weights to HDF5
 model.save_weights("model/model_A_SHT.h5")
 print("Saved model to disk")
+
